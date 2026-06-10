@@ -1,29 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/sections/Hero";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { CTABanner } from "@/components/sections/CTABanner";
+import logo from "@/assets/logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Lakshmi Srot Finance Solutions — Loans, Mortgage & Insurance" },
+      { name: "description", content: "Your trusted partner for smart financial solutions. Home, business, personal, vehicle, education loans, mortgage and insurance with expert guidance." },
+      { property: "og:title", content: "Lakshmi Srot Finance Solutions" },
+      { property: "og:description", content: "Trusted finance partner with personalized guidance and competitive rates." },
+      { property: "og:image", content: logo.url },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
-  component: Index,
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <AboutSection />
+      <ServicesGrid limit={6} />
+      <WhyChooseUs />
+      <ProcessSteps />
+      <Testimonials />
+      <CTABanner />
+    </>
   );
 }
