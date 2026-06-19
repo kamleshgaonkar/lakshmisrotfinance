@@ -81,6 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: SITE.name },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "Lovable App" },
+      { property: "og:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Lovable App" },
+      { property: "og:description", content: "Trusted finance partner for home, business, personal, vehicle and education loans, mortgage, insurance and auction property assistance." },
+      { name: "twitter:description", content: "Trusted finance partner for home, business, personal, vehicle and education loans, mortgage, insurance and auction property assistance." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06d714dc-274d-48cf-a1ed-2aa7cdf49b3e/id-preview-d9614965--000e6be7-da56-4adc-80fc-264608e79ddb.lovable.app-1781871972299.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06d714dc-274d-48cf-a1ed-2aa7cdf49b3e/id-preview-d9614965--000e6be7-da56-4adc-80fc-264608e79ddb.lovable.app-1781871972299.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
