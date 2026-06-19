@@ -6,6 +6,7 @@ import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { CTABanner } from "@/components/sections/CTABanner";
+import logo from "@/assets/logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      <Hero />
+      <HeroSlider />
       <AboutSection />
       <ServicesGrid limit={6} />
       <WhyChooseUs />
