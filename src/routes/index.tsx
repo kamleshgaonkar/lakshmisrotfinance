@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Hero } from "@/components/sections/Hero";
+import { HeroSlider } from "@/components/sections/HeroSlider";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      <Hero />
+      <HeroSlider />
       <AboutSection />
       <ServicesGrid limit={6} />
       <WhyChooseUs />
